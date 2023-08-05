@@ -7,83 +7,102 @@ int vegP= 200;
 
     public void vegPizza() {
         PizzaVerieties pv = new PizzaVerieties();
-        System.out.println("Veg pizza = 200");
-        System.out.println("you can pay  200 to get your order \n" +
-                "please pay your bill ");
-        int payment = sc.nextInt();
-        if (payment == 200) {
-            System.out.println("Your order will be delivered in 20 min");
-        } else if (payment > 200 || payment < 200) {
-            System.out.println("check your payment again");
-            pv.vegPizza();
-        } else {
-            System.out.println("your payment not received please check again");
-        }
+        BillPayment b= new BillPayment();
+        System.out.println(" veg pizza = 200");
 
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("enter your choice\n" +
+                "1. order more\n" +
+                "2. exit");
+        int choice1 = scan.nextInt();
+
+        PizzaVerieties pv1 = new PizzaVerieties();
+        if (choice1 == 1) {
+            pv1.addMenu();
+        } else {
+            b.payment();
+        }
     }
 
     public void nonVegPizza() {
         PizzaVerieties pv = new PizzaVerieties();
-        System.out.println("NonVeg pizza = 400");
-        System.out.println("you can pay  400 to get your order \n" +
-                "please pay your bill ");
-        int payment = sc.nextInt();
-        if (payment == 400) {
-            System.out.println("Your order will be delivered in 20 min");
-        } else if (payment > 400 || payment < 400) {
-            System.out.println("check your payment again");
-            pv.nonVegPizza();
+        BillPayment b= new BillPayment();
+        System.out.println(" nonveg = 400");
+
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("enter your choice\n" +
+                "1. order more\n" +
+                "2. exit");
+        int choice1 = scan.nextInt();
+
+        PizzaVerieties pv1 = new PizzaVerieties();
+        if (choice1 == 1) {
+            pv1.addMenu();
         } else {
-            System.out.println("your payment not received please check again");
+            b.payment2();
         }
     }
 
     public void paneerPizza() {
         PizzaVerieties pv = new PizzaVerieties();
-        System.out.println("paneer pizza = 300");
-        System.out.println("you can pay  300 to get your order \n" +
-                "please pay your bill ");
-        int payment = sc.nextInt();
-        if (payment == 300) {
-            System.out.println("Your order will be delivered in 20 min");
-        } else if (payment > 300 || payment < 300) {
-            System.out.println("check your payment again");
-            pv.paneerPizza();
+        BillPayment b= new BillPayment();
+        System.out.println("Paneer Pizza = 300");
+
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("enter your choice\n" +
+                "1. order more\n" +
+                "2. exit");
+        int choice1 = scan.nextInt();
+
+        PizzaVerieties pv1 = new PizzaVerieties();
+        if (choice1 == 1) {
+            pv1.addMenu();
         } else {
-            System.out.println("your payment not received please check again");
+            b.payment3();
         }
 
     }
     public void cornPizza(){
         PizzaVerieties pv = new PizzaVerieties();
-        System.out.println("corn pizza = 200");
-        System.out.println("you can pay  200 to get your order \n" +
-                "please pay your bill ");
-        int payment = sc.nextInt();
-        if (payment==200){
-            System.out.println("Your order will be delivered in 20 min");
-        }else if (payment>200 || payment <200){
-            System.out.println("check your payment again");
-            pv.cornPizza();
-        }else {
-            System.out.println("your payment not received please check again");
+        BillPayment b= new BillPayment();
+        System.out.println(" Corn pizza = 200");
+
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("enter your choice\n" +
+                "1. order more\n" +
+                "2. exit");
+        int choice1 = scan.nextInt();
+
+        PizzaVerieties pv1 = new PizzaVerieties();
+        if (choice1 == 1) {
+            pv1.addMenu();
+        } else {
+            b.payment();
         }
     }
 
 
-    public void spicesPizza(){
+    public void spicesPizza() {
         PizzaVerieties pv = new PizzaVerieties();
+        BillPayment b= new BillPayment();
         System.out.println(" spices pizza = 200");
-        System.out.println("you can pay  200 to get your order \n" +
-                "please pay your bill ");
-        int payment = sc.nextInt();
-        if (payment==200){
-            System.out.println("Your order will be delivered in 20 min");
-        }else if (payment>200 || payment <200){
-            System.out.println("check your payment again");
-            pv. spicesPizza();
-        }else {
-            System.out.println("your payment not received please check again");
+
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("enter your choice\n" +
+                "1. order more\n" +
+                "2. exit");
+        int choice1 = scan.nextInt();
+
+        PizzaVerieties pv1 = new PizzaVerieties();
+        if (choice1 == 1) {
+            pv1.addMenu();
+        } else {
+            b.payment();
         }
     }
     public void addMenu(){
@@ -112,7 +131,7 @@ int vegP= 200;
 
             case 1 :
 
-                System.out.println("veg biryani = " + (vegB + vegP));
+                System.out.println("veg biryani = " + (vegB));
 
                 break;
             case 2 :
